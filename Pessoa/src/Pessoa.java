@@ -1,7 +1,5 @@
 
 public class Pessoa {
-
-	
 	String nome;
 	int idade;
 	double altura,peso;
@@ -50,7 +48,7 @@ public class Pessoa {
 		this.peso = peso;
 	}
 
-	@Override
+	
 	public String toString() {
 		return "Pessoa [getNome()=" + getNome() + ", getIdade()=" + getIdade()
 				+ ", getAltura()=" + getAltura() + ", getPeso()=" + getPeso()
@@ -59,4 +57,5 @@ public class Pessoa {
 	
 	
 	
+
 }
