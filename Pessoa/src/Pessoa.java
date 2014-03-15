@@ -50,9 +50,9 @@ public class Pessoa {
 
 	
 	public String toString() {
-		return "Pessoa [getNome()=" + getNome() + ", getIdade()=" + getIdade()
-				+ ", getAltura()=" + getAltura() + ", getPeso()=" + getPeso()
-				+ "]";
+		return "Nome" + getNome() + ", Idade =" + getIdade()
+				+ ", Altura =" + getAltura() + ", Peso =" + getPeso();
+			
 	}
 	
 	

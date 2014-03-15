@@ -12,9 +12,13 @@ public class TestePessoa {
 		p1.setAltura(t.nextDouble());
 		p1.setPeso(t.nextDouble());
 		
+		
 		Pessoa p2 = new Pessoa("Joao", 18, 1.70,75 );
 
 		
+		System.out.println(p1.toString()); 
+		System.out.println("\n");
+		System.out.println(p2.toString()); 
 	}
 
 }
