@@ -7,15 +7,22 @@ import com.senac.jogos.cartas.Carta;
 public class MatchingCardGame {
 
 	private Baralho baralho;
-	private Jogador jogador;
+	/* criando um array(4 posições) para guardar as referencias do jogador*/
+	private Jogador[] jogador = new Jogador[4];
 	
 	private Carta mesa;
 	
 	public MatchingCardGame()
 	{
 		baralho = new Baralho();
-		jogador = new Jogador();
-		mesa = baralho.drawCarta();
+		mesa = baralho.drawCarta();		
+		// instanciando 4 jogadores nas suas respectivas posições
+		
+		for(int i=0;i<3;i++)			
+		{
+		jogador[i] = new Jogador();
+		
+		}		
 	}
 	
 	public int matchCarta(Carta carta)
@@ -46,8 +53,9 @@ public class MatchingCardGame {
 		return baralho.drawCarta();
 	}
 	
-	public Jogador getJogador()
+	public Jogador[] getJogador()
 	{
+		
 		return jogador;
 	}
 }
