@@ -17,7 +17,11 @@ public class JogoController {
 	public void playTurno()
 	{
 		int pontos = jogo.matchCarta(cartaJogador);
-		jogo.getJogador().addPontos(pontos);
+		for(int i =0; i<3;i++)
+		{
+		// falta vincular os pontos ao jogador
+		//jogo.getJogador().addPontos(pontos);
+		}
 		// descartar carta
 		jogo.setMesa(cartaJogador);
 		cartaJogador = null;
