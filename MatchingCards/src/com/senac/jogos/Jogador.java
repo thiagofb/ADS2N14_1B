@@ -15,4 +15,5 @@ public class Jogador {
 	public void subtractPontos(int pontos) {
 		this.pontos -= pontos;
 	}
-}
+	
+	}
