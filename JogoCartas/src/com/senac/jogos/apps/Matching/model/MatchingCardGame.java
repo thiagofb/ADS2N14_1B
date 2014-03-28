@@ -15,13 +15,13 @@ public class MatchingCardGame {
 	public MatchingCardGame()
 	{
 		baralho = new Baralho();
-		mesa = baralho.drawCarta();		
+		//mesa = baralho.drawCarta();		
 		// instanciando 4 jogadores nas suas respectivas posições
 		
 		for(int i=0;i<3;i++)			
 		{
 		jogador[i] = new Jogador();
-		
+		mesa = baralho.drawCarta();	
 		}		
 	}
 	
@@ -53,11 +53,48 @@ public class MatchingCardGame {
 		return baralho.drawCarta();
 	}
 	
-	public Jogador[] getJogador()
+	public Jogador getJogador1()
 	{
 		
-		return jogador;
+		return jogador[1];
 	}
+	public Jogador getJogador2()
+	{
+		
+		return jogador[2];
+	}
+	public Jogador getJogador3()
+	{
+		
+		return jogador[3];
+	}
+	public Jogador getJogador4()
+	{
+		
+		return jogador[4];
+	}
+	/*
+	public void setJogador1()
+	{
+		
+		jogador[1] =;
+	}
+	public Jogador setJogador2()
+	{
+		
+		return jogador[2];
+	}
+	public Jogador setJogador3()
+	{
+		
+		return jogador[3];
+	}
+	public Jogador setJogador4()
+	{
+		
+		return jogador[4];
+	}
+	*/
 }
 
 

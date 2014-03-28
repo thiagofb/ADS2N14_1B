@@ -32,5 +32,5 @@ public class Baralho {
 		
 		return sorteada;
 	}
-		
+	public static void main(String[] args){}
 }

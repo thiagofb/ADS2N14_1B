@@ -17,11 +17,12 @@ public class JogoController {
 	public void playTurno()
 	{
 		int pontos = jogo.matchCarta(cartaJogador);
-		for(int i =0; i<3;i++)
-		{
+		
 		// falta vincular os pontos ao jogador
-		//jogo.getJogador().addPontos(pontos);
-		}
+		jogo.getJogador1().addPontos(pontos);
+		jogo.getJogador2().addPontos(pontos);
+		jogo.getJogador3().addPontos(pontos);
+		jogo.getJogador4().addPontos(pontos);
 		// descartar carta
 		jogo.setMesa(cartaJogador);
 		cartaJogador = null;
@@ -29,7 +30,7 @@ public class JogoController {
 	
 	public String showJogador()
 	{
-		return String.format("Pontos: %d", jogo.getJogador().getPontos());
+		return String.format("Pontos: %d", jogo.getJogador1().getPontos());
 	}
 	
 	private String showCarta(Carta carta)
