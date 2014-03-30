@@ -2,20 +2,37 @@ package com.senac.banco.model;
 
 public class Especial extends Conta {
 	
-	private double limite;
+		
+	private double limite =0;
+	
+	
+	
+	public Especial()
+	{
+					
+	}	
 	
 	//limite sera o dobro do saldo
-	public void verificaLimite()
+		public void verificaLimite()
 	{
-		//falta testar se for negativo(para nao gerar valor dobrado negativo)
-		limite = 2 * super.saldo;
-	}
-	public void saque(Double saque)
-	{
-		super.saldo -= saque;
-				
+		limite = super.saldo*2;
 	}
 	
+	//saque tem que ser menor que o limite
+	public void saque(Double valor)
+	{
+		if(valor <= limite)
+		{
+		super.saldo-= valor;
+		System.out.println("Saque realizado com sucesso!");
+		}
+		else
+		{
+			System.out.println("Saldo insuficiente para realizar esta operação!");
+		}
+		
+	}
 	
+
 
 }
