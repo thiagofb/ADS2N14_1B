@@ -8,6 +8,14 @@ public class Cliente {
 	public Cliente()
 	{
 		
+		
+	}
+	public void criaCliente()
+	{
+		for(int i=0;i<=3;i++)
+		{
+			cliente[i] = new Cliente();
+		}
 	}
 
 	public String getNome() {
