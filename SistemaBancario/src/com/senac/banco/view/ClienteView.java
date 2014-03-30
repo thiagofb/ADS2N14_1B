@@ -6,12 +6,15 @@ public class ClienteView {
 
 	public static void main(String[] args) {
 		Scanner t = new Scanner(System.in);
+	//	int op0=0; // entrar ou sair do sistema
 		int op1=0; // para qem tem conta
 		int op2=0; // para realizar operaçao na conta
 		int op3=0; // para criar conta
 
 		
 		// AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
+	//	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
+	//	op0=t.nextInt();
 		
 		
 		System.out.println("BEM VINDO AO SISTEMA BANCARIO XXX");
@@ -77,19 +80,16 @@ public class ClienteView {
 		default:
 			System.out.println("Operação invalida!");
 			break;
-		
-		
 		}
 		
-	
-        
+		
+		
+		
+	 
          
-	}
-
+}
 		
 		
-		
-
 }
 
 
