@@ -6,7 +6,7 @@ public class CompactView extends ContatoView {
 
 	@Override
 	public void printContato(String nome, String telefone, String endereco) {
-		out.println(String.format("Contato: %s - %s - %s", nome,telefone,endereco));
+		out.println(String.format("Contato: %s - %s - %s", nome, telefone, endereco));
 	}
 
 }
