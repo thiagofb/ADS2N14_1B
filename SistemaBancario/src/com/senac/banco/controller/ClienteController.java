@@ -8,6 +8,7 @@ public class ClienteController {
 	protected Conta conta1 = new Conta();
 	protected Cliente cliente1 = new Cliente();
 	protected Especial clienteEspecial = new Especial();
+	protected Investimento investe = new Investimento();
 
 	 public void criaConta()
 	 {
@@ -48,11 +49,27 @@ public class ClienteController {
 		 {
 		  System.out.println("saldo insuficiente!");
 		 }
-		 
+			 
 	} 
 			
+		public void showSaldo()
+		{
+			System.out.println();
+		}
 		
+		public void investimento()
+		{
+			investe.dividendos(taxa);
 			
+		}
+		
+		public void deposito(Double valordepo)
+		{
+			conta1.depositar(valordepo);
+			
+		}
+			
+		
 		 
 	
 		 
