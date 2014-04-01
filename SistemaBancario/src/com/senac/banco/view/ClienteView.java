@@ -62,7 +62,7 @@ public class ClienteView {
 			
 			
 		case 2:
-			System.out.println("Que tipo de conta deseja abrir: \n 1- Comum \n 2- Especial \n 3- Investimento \n 4- SAIR");
+		/*	System.out.println("Que tipo de conta deseja abrir: ");
 			// chama as aberturas de conta
 			op3= t.nextInt();
 			
@@ -70,15 +70,11 @@ public class ClienteView {
 			
 			case 1:
 				// cria conta comum
-				System.out.println("Digite seu nome e tipo de conta( 1- Comum, 2- Especial e 3- Investimento):");
-				cliente1.setNome(t.nextLine());
-				cliente1.setTipoConta(t.nextInt());
-				System.out.println(" Escolha um numero de verificação para sua conta e escolha numero para sua conta:");
-				conta1.setNunVerificacao(t.nextInt());
-				conta1.setNunConta(t.nextInt());
+				*/
+				controle.criaConta();
 				
-				break;
-			case 2:
+				//break;
+		/*	case 2:
 				//cria conta Especial
 				
 				break;
@@ -88,14 +84,14 @@ public class ClienteView {
 				break;
 			case 4:
 				// SAIR do programa
-				break;
+				break;*/
 			}
 			
-			break;
+	/*		break;
 		default:
 			System.out.println("Operação invalida!");
-			break;
-		}
+			break;*/
+		//}
 		
 		
 		

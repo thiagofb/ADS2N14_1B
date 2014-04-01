@@ -3,7 +3,7 @@ package com.senac.banco.model;
 public class Conta {
 
 	protected double saldo=0;
-	protected int numConta;
+	protected int numConta =1;
 	protected int numVerificacao;
 	
 	

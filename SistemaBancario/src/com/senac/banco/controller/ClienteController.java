@@ -1,30 +1,64 @@
 package com.senac.banco.controller;
 import com.senac.banco.model.*;
+import com.senac.banco.view.*;
 import java.util.*;
 
 public class ClienteController {
-	protected Cliente Cliente;
+	Scanner teclado = new Scanner(System.in);
 	protected Conta conta1 = new Conta();
-	protected Cliente cliente = new Cliente();
-	 
+	protected Cliente cliente1 = new Cliente();
+	protected Especial clienteEspecial = new Especial();
+
 	 public void criaConta()
 	 {
-		 Scanner teclado = new Scanner (System.in);
 		 
-		conta1 = new Conta();
-		System.out.println(" Escolha um numero de verificação para sua conta e escolha numero para sua conta:");
-		conta1.setNunVerificacao(teclado.nextInt());
-		conta1.setNunConta(teclado.nextInt());
-		 
-	 }
+				 		 
+		cliente1 = new Cliente();
+		System.out.println("Digite seu nome e tipo de conta( 1- Comum, 2- Especial e 3- Investimento):");
+		cliente1.setNome(teclado.next());
+		cliente1.setTipoConta(teclado.nextInt());
+	
+		 conta1 = new Conta();
+		 System.out.println(" Escolha um numero de verificação para sua conta e escolha numero para sua conta:");
+		 conta1.setNunVerificacao(teclado.nextInt());
+		 conta1.setNunConta(teclado.nextInt());
+				    
+				System.out.println("Operaçao concluida!");
+		
+			
+		}
 	 
-	 public void operacao()
+	 public void saque()
 	 {
-		 cliente.criaCliente();
-		 		 
+		 System.out.println("Digite o valor para saque: ");
+		 if(cliente1.getTipoConta() == 1){
+			 conta1.sacar(teclado.nextDouble());
+			 System.out.println("Operaçao concluida!");
+		 }else
+		 	{
+			 
+			 System.out.println("Saldo insuficiente!");
+		 	}
+	
+		 if(	 cliente1.getTipoConta() == 2)
+		 {
+			 clienteEspecial.sacar(teclado.nextDouble());
+		
+		 }else
+		 {
+		  System.out.println("saldo insuficiente!");
+		 }
 		 
-	 }
+	} 
+			
+		
+			
+		 
+	
+		 
 	 
+	 
+	
 	 
 	
 
