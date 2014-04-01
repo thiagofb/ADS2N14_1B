@@ -10,14 +10,14 @@ public class ClienteView {
 	public static void main(String[] args) {
 		ClienteController controle = new ClienteController();
 		Scanner t = new Scanner(System.in);
-	//	int op0=0; // entrar ou sair do sistema
+		int op0=0; // entrar ou sair do sistema
 		int op1=0; // para qem tem conta
 		int op2=0; // para realizar operaçao na conta
 		
      // AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
-	//	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
-	//	op0=t.nextInt();
-		
+	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
+	op0=t.nextInt();
+		while(op0 != 2){
 		
 		System.out.println("BEM VINDO AO SISTEMA BANCARIO XXX");
 		System.out.println("Voce já e nosso Cliente: \n 1- Sim \n 2- Não, mas quero abrir uma conta");
@@ -64,6 +64,7 @@ public class ClienteView {
 				break;
 		}		
 		
+		}
 		
 	 
          
