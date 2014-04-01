@@ -3,33 +3,36 @@ import com.senac.banco.model.*;
 public class Cliente {
 	
 	protected String nome;
-	protected Cliente[] cliente = new Cliente[4];
-	protected Conta conta = new Conta();
-	protected Especial premium = new Especial();
+	protected int tipoConta;
+	
 	
 	public Cliente()
 	{
-			
+		
+	}
+	public Cliente( String nome, int tipoConta)
+	{
+			this.nome = nome;
+			this.tipoConta = tipoConta;
 	}
 	
-	public void criaCliente()
-	{
-		for(int i=0;i<3;i++)
-		{
-			cliente[i]= new Cliente();
-			cliente[i].setNome(nome);
-			cliente[i].conta.setNunConta(i);
-			cliente[i].conta.setNunVerificacao(i);
-			
-		}
-	}
-
+	
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+
+	public int getTipoConta() {
+		return tipoConta;
+	}
+
+
+	public void setTipoConta(int tipoConta) {
+		this.tipoConta = tipoConta;
 	}
 	
 	

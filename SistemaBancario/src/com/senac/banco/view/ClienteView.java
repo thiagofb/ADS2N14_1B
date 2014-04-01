@@ -1,16 +1,22 @@
 package com.senac.banco.view;
 import java.util.*;
-import com.senac.banco.model.Cliente;
+import com.senac.banco.controller.*;
+import com.senac.banco.model.*;
 
 public class ClienteView {
+	
+	
 
 	public static void main(String[] args) {
+		ClienteController controle = new ClienteController();
 		Scanner t = new Scanner(System.in);
 	//	int op0=0; // entrar ou sair do sistema
 		int op1=0; // para qem tem conta
 		int op2=0; // para realizar operaçao na conta
 		int op3=0; // para criar conta
-
+        
+		Cliente cliente1 = new Cliente(null, 0);
+		Conta conta1 = new Conta();
 		
 		// AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
 	//	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
@@ -64,12 +70,21 @@ public class ClienteView {
 			
 			case 1:
 				// cria conta comum
+				System.out.println("Digite seu nome e tipo de conta( 1- Comum, 2- Especial e 3- Investimento):");
+				cliente1.setNome(t.nextLine());
+				cliente1.setTipoConta(t.nextInt());
+				System.out.println(" Escolha um numero de verificação para sua conta e escolha numero para sua conta:");
+				conta1.setNunVerificacao(t.nextInt());
+				conta1.setNunConta(t.nextInt());
+				
 				break;
 			case 2:
 				//cria conta Especial
+				
 				break;
 			case 3: 
 				//cria conta de investimento
+				
 				break;
 			case 4:
 				// SAIR do programa

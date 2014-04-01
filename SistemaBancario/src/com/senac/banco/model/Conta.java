@@ -6,6 +6,8 @@ public class Conta {
 	protected int numConta;
 	protected int numVerificacao;
 	
+	
+	
 	public Conta()
 	{
 		
