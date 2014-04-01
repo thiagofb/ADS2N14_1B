@@ -19,7 +19,7 @@ public class Especial extends Conta {
 	}
 	
 	//saque tem que ser menor que o limite
-	public void saque(Double valor)
+	public void sacar(Double valor)
 	{
 		if(valor <= limite)
 		{

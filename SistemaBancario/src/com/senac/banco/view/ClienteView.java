@@ -32,21 +32,22 @@ public class ClienteView {
 		switch(op1){
 		case 1:
 			// Primeira parte do switch user ja tem conta e deseja fazer operação
-			
-			System.out.println("Digite numero da sua conta e sua senha");
-			// compara a conta e a senha se validar abre as operações se nao pede novamente senha
+	
 			System.out.println("Bem vindo Sr(a) \n Digite: \n 1- Sacar \n 2- Ver saldo \n 3- Depositar \n 4- SAIR");
 			// realiza as operações conforme opçao
 			op2 = t.nextInt();
 			switch(op2){
 			case 1: 
-				//realiza saque
+				controle.saque();
+				// faz saque
 				break;
 			case 2: 
 				// verifica saldo
+				controle.showSaldo();
 				break;
 			case 3:
 				// realiza deposito
+				controle.deposito();
 				break;
 			case 4:
 				// sai do programa
@@ -62,38 +63,10 @@ public class ClienteView {
 			
 			
 		case 2:
-		/*	System.out.println("Que tipo de conta deseja abrir: ");
-			// chama as aberturas de conta
-			op3= t.nextInt();
-			
-			switch(op3){
-			
-			case 1:
-				// cria conta comum
-				*/
+		
 				controle.criaConta();
-				
-				//break;
-		/*	case 2:
-				//cria conta Especial
-				
 				break;
-			case 3: 
-				//cria conta de investimento
-				
-				break;
-			case 4:
-				// SAIR do programa
-				break;*/
-			}
-			
-	/*		break;
-		default:
-			System.out.println("Operação invalida!");
-			break;*/
-		//}
-		
-		
+		}		
 		
 		
 	 

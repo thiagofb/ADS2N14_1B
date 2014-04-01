@@ -7,7 +7,7 @@ public class Investimento extends Conta{
 	
 	public void dividendos(Double taxa)
 	{
-		taxa=0.41;
+		 taxa=0.41;
 		super.saldo = super.saldo * (super.saldo*taxa);
 	}
 	
