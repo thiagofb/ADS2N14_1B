@@ -13,12 +13,8 @@ public class ClienteView {
 	//	int op0=0; // entrar ou sair do sistema
 		int op1=0; // para qem tem conta
 		int op2=0; // para realizar operaçao na conta
-		int op3=0; // para criar conta
-        
-		Cliente cliente1 = new Cliente(null, 0);
-		Conta conta1 = new Conta();
 		
-		// AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
+     // AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
 	//	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
 	//	op0=t.nextInt();
 		
@@ -56,7 +52,7 @@ public class ClienteView {
 			}
 			
 			
-			break;
+			
 			
 			
 			// segunda parte do 1º switch se cliente qer abrir uma conta
