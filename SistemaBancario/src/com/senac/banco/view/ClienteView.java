@@ -19,9 +19,9 @@ public class ClienteView {
 		int op2=0; // para realizar operaçao na conta
 		
     
-	//System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
-	//op0=t.nextInt();
-		//while(op0 != 2){
+	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
+	int op0=t.nextInt();
+	while(op0 != 2){
 		
 		
 		System.out.println("BEM VINDO AO SISTEMA BANCARIO XXX");
@@ -98,9 +98,12 @@ public class ClienteView {
 			int nconta = t.nextInt();
 		controle.criaConta(nome, tipo, nconta);
 			
-				break;
-		}		
 		
+				break;
+		}		// final do OP1 - switch de ja tem user ou nao
+		
+	}// fim do OP0 a repetição do programa
+	
 	}
 	public void showMsg(String msg)
 	{
