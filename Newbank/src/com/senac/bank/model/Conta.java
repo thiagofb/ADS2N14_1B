@@ -12,6 +12,16 @@ public class Conta {
 	}
 	
 
+	public void setNumConta(int numConta) {
+		this.numConta = numConta;
+	}
+
+
+	public Conta() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void depositar(double valor)
 	{
 		saldo+=valor;
