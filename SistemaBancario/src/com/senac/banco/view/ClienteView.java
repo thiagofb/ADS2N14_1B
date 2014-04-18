@@ -36,24 +36,48 @@ public class ClienteView {
 			// Primeira parte do switch user ja tem conta e deseja fazer operação
 	
 			System.out.println("Bem vindo Sr(a) \n Digite: \n 1- Sacar \n 2- Ver saldo \n 3- Depositar \n 4- SAIR");
+			
 			// realiza as operações conforme opçao
+			
 			op2 = t.nextInt();
+			
 			switch(op2){
+			
 			case 1: 
+				System.out.println("Tipo da conta: ");
+				int tipo = t.nextInt();
 				System.out.println("Digite numero da conta:");
 				int nconta = t.nextInt();
 				System.out.println("Digite o valor do saque:");
 				double valor = t.nextDouble();
-				controle.saque(nconta,valor);
+				
+				
+				controle.saque(tipo, nconta, valor);
+				
 				// faz saque
 				break;
+				
 			case 2: 
+				System.out.println("Digite tipo de conta 1-normal 2-especial 3-investimento");
+				int type = t.nextInt();
+				System.out.println("Digite numero da sua conta para consultar saldo: ");
+				int nconta1 = t.nextInt();
+				
+				controle.showSaldo(type, nconta1);
 				// verifica saldo
-				controle.showSaldo();
+				
 				break;
+				
 			case 3:
+				System.out.println("Digite tipo de conta 1-normal 2-especial 3-investimento");
+				int type1 = t.nextInt();
+				System.out.println("Digite numero da sua conta: ");
+				int nconta2 = t.nextInt();
+				System.out.println("Digite valor do deposito: ");
+				double depo = t.nextDouble();
+				
+				controle.deposito(nconta2,depo,type1);
 				// realiza deposito
-				controle.deposito();
 				break;
 			case 4:
 				// sai do programa
@@ -72,7 +96,7 @@ public class ClienteView {
 			int tipo = t.nextInt();
 			System.out.println("Digite numero da conta");
 			int nconta = t.nextInt();
-		
+		controle.criaConta(nome, tipo, nconta);
 			
 				break;
 		}		
