@@ -1,5 +1,6 @@
 package com.senac.banco.model;
 import com.senac.banco.model.*;
+@SuppressWarnings("unused")
 public class Cliente {
 	
 	protected String nome;

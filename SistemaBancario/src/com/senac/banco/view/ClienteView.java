@@ -1,23 +1,28 @@
 package com.senac.banco.view;
+import java.text.Format;
 import java.util.*;
 import com.senac.banco.controller.*;
 import com.senac.banco.model.*;
 
+@SuppressWarnings("unused")
 public class ClienteView {
 	
 	
 
 	public static void main(String[] args) {
+	
 		ClienteController controle = new ClienteController();
+		@SuppressWarnings("resource")
 		Scanner t = new Scanner(System.in);
-		int op0=0; // entrar ou sair do sistema
+		//int op0=0; // entrar ou sair do sistema
 		int op1=0; // para qem tem conta
 		int op2=0; // para realizar operaçao na conta
 		
-     // AQUI devera tem uma repetição do sistema usando DO while ou while  TESTAr
-	System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
-	op0=t.nextInt();
-		while(op0 != 2){
+    
+	//System.out.println("DIgite: \n 1- Entrar \n 2- Sair");
+	//op0=t.nextInt();
+		//while(op0 != 2){
+		
 		
 		System.out.println("BEM VINDO AO SISTEMA BANCARIO XXX");
 		System.out.println("Voce já e nosso Cliente: \n 1- Sim \n 2- Não, mas quero abrir uma conta");
@@ -26,6 +31,7 @@ public class ClienteView {
 		
 		
 		switch(op1){
+		
 		case 1:
 			// Primeira parte do switch user ja tem conta e deseja fazer operação
 	
@@ -34,7 +40,11 @@ public class ClienteView {
 			op2 = t.nextInt();
 			switch(op2){
 			case 1: 
-				controle.saque();
+				System.out.println("Digite numero da conta:");
+				int nconta = t.nextInt();
+				System.out.println("Digite o valor do saque:");
+				double valor = t.nextDouble();
+				controle.saque(nconta,valor);
 				// faz saque
 				break;
 			case 2: 
@@ -49,27 +59,31 @@ public class ClienteView {
 				// sai do programa
 				break;
 			
-			}
-			
-			
-			
+			}			
 			
 			
 			// segunda parte do 1º switch se cliente qer abrir uma conta
 			
 			
 		case 2:
+			System.out.println("Digite seu nome: ");
+			String nome = t.next();
+			System.out.println("Escolha tipo de conta: 1-Normal 2-Especial 3-Investimento");
+			int tipo = t.nextInt();
+			System.out.println("Digite numero da conta");
+			int nconta = t.nextInt();
 		
-				controle.criaConta();
+			
 				break;
 		}		
 		
-		}
+	}
+	public void showMsg(String msg)
+	{
+	System.out.println(msg);
+	}
 		
 	 
-         
-}
-		
 		
 }
 
