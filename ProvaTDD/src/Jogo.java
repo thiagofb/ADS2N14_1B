@@ -14,12 +14,17 @@ public class Jogo {
 		posicao=0;
 	}
 	
-	public void carregar(int combustivel) throws tanqueCheioException  
+	public void carregar() throws tanqueCheioException  
 	{	
-		if(combustivel <= 6)
-		tanque += combustivel;
-		else
+		if(tanque == 6)	{
 			throw new tanqueCheioException();
+		}			
+		else
+			if(tabuleiro[posicao ] > 0  || posicao ==0)// caso na posiçao do tabu exista combustivel ele pode pegar ou no tabu 0 que tem infinito
+				tanque++;
+		     tabuleiro[posicao]--;// caso na posiçao exista combustivel ele pega 1
+		
+			
 	}
 		
 	public void avancar() throws SemCombustivelException
