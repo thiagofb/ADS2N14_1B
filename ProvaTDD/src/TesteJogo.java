@@ -17,17 +17,17 @@ public class TesteJogo {
 	 }
 	 
     @Test
-	public void DeviariaTerAbastecido() throws tanqueCheioException { 
+	public void Abastecer() throws tanqueCheioException { 
 	{
+		j1.iniciaPartida();
+		j1.avancar();
 		
-		System.out.println("digite quantidade de combustivel abastecido:");
-		int combustivel = t.nextInt();
-	
-		
-		j1.carregar(combustivel);
+		int comb = j1.getTanque();
+				
+		j1.carregar();
 		
 		
-		assertEquals(6, j1.getTanque()); 
+		assertEquals(comb+1, j1.getTanque()); 
 	}
 	}
     
@@ -61,6 +61,8 @@ public class TesteJogo {
     	
     	
     }
+    
+ 
     
     
     
