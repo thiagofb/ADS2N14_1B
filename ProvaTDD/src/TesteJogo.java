@@ -47,7 +47,7 @@ public class TesteJogo {
     }
      
     @Test
-    public void voltarUmaCasa()
+    public void voltarUmaCasa() throws SemCombustivelException
     {
     	j1.iniciaPartida();
     	j1.avancar(); //para ir para casa 1 e voltar para a 0
@@ -57,7 +57,7 @@ public class TesteJogo {
     	j1.voltar();
     	
     	assertEquals(andar-1, j1.getPosicao());
-    	assertEquals(andar-1,j1.getTanque());
+    	assertEquals(comb-1,j1.getTanque());
     	
     	
     }

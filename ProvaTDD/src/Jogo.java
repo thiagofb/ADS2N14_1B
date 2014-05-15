@@ -24,11 +24,21 @@ public class Jogo {
 		
 	public void avancar() throws SemCombustivelException
 	{
-	   if(tanque > 0){
-		  tanque--;
-		  posicao++;}
-		  else
+		if(tanque > 0){
+			tanque--;
+			posicao++;}
+		 else
 			  throw new SemCombustivelException();
+	}
+	
+	public void voltar() throws SemCombustivelException
+	{
+		if(tanque >0){
+			tanque--;
+			posicao--;}
+		else
+			throw new SemCombustivelException();
+		
 	}
 
 	// getters
@@ -40,6 +50,8 @@ public class Jogo {
 	{
 		return tanque;
 	}
+
+	
 
 
 	
