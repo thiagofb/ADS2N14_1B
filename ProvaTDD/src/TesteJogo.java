@@ -65,7 +65,7 @@ public class TesteJogo {
    	}
     
    @Test
-   public void DescarregaCombustivel(){
+   public void DescarregaCombustivel() throws SemCombustivelException{
 	   j1.iniciaPartida();
 	   j1.avancar();
 	   
@@ -83,7 +83,7 @@ public class TesteJogo {
 	   
 	   
 	   
-   }
+   
  
     
     
