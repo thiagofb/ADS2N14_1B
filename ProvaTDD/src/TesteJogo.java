@@ -32,7 +32,7 @@ public class TesteJogo {
 	}
     
     @Test
-    public void avancarUmaCasa(){
+    public void avancarUmaCasa() throws SemCombustivelException{
     	
     	j1.iniciaPartida();
     	
