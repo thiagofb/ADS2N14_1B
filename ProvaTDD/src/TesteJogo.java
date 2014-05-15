@@ -45,6 +45,24 @@ public class TesteJogo {
     	assertEquals(comb-1,j1.getTanque());
     	
     }
+     
+    @Test
+    public void voltarUmaCasa()
+    {
+    	j1.iniciaPartida();
+    	j1.avancar(); //para ir para casa 1 e voltar para a 0
+    	int andar = j1.getPosicao();
+    	int comb = j1.getTanque();
+    	
+    	j1.voltar();
+    	
+    	assertEquals(andar-1, j1.getPosicao());
+    	assertEquals(andar-1,j1.getTanque());
+    	
+    	
+    }
+    
+    
     
 	
     
