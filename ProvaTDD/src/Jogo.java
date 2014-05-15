@@ -7,16 +7,23 @@ public class Jogo {
 	
 	
 
+	
 	public void carregar(int combustivel) {
 	
 		if(combustivel <= 6)
 		tanque += combustivel;
 		else
-			System.out.println("Exception");
-		}
+			System.out.println("exception");
+	}
+	
 
 	public int getTanque() {
 		return tanque;
 	}
+
+
+	
+
+	
 
 }
