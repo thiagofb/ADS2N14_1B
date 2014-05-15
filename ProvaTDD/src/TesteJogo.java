@@ -13,11 +13,11 @@ public class TesteJogo {
 	 public void iniciandoJogo(){
 		 j1.iniciaPartida();
 		 assertEquals(j1.getPosicao(),0);
-		 assertEquals(j1.getTanque(),6);
+		 assertEquals(j1.getTanque(), 6);
 	 }
 	 
     @Test
-	public void DeviariaTerAbastecido() throws Exception { 
+	public void DeviariaTerAbastecido() throws tanqueCheioException { 
 	{
 		
 		System.out.println("digite quantidade de combustivel abastecido:");
@@ -30,6 +30,22 @@ public class TesteJogo {
 		assertEquals(6, j1.getTanque()); 
 	}
 	}
+    
+    @Test
+    public void avancarUmaCasa(){
+    	
+    	j1.iniciaPartida();
+    	
+    	int andar = j1.getPosicao();
+    	int comb = j1.getTanque();
+    	
+    	j1.avancar();
+    	// andar recebe posiçao 0 do getPosicao entao anda 1 casa ( ja tanque e inverso)
+    	assertEquals(andar+1,j1.getPosicao());
+    	assertEquals(comb-1,j1.getTanque());
+    	
+    }
+    
 	
     
 	
